@@ -1,0 +1,134 @@
+<!doctype HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<script src="libs/aframe.min.js"></script>
+<script src='libs/aframe-ar.min.js'></script>
+
+<style>
+
+body {
+  background-color: black;
+}
+
+#loading-animation {
+  z-index: -9999999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:60px;
+  height:auto;
+}
+
+</style>
+
+  <body style='margin : 0px; overflow: hidden;'>
+
+    <img id="loading-animation" src="assets/loading.gif">
+
+    <a-scene vr-mode-ui='enabled: false' embedded arjs='trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+
+			<a-assets>
+
+        <!-- gale_crater -->
+				<a-asset-item id="gale_crater-obj" src="models/gale_crater/model.obj"></a-asset-item>
+				<img id="gale_crater-tex" src="models/gale_crater/texture.png">
+
+        <!-- gasa_crater -->
+				<a-asset-item id="gasa_crater-obj" src="models/gasa_crater/model.obj"></a-asset-item>
+				<img id="gasa_crater-tex" src="models/gasa_crater/texture.png">
+
+        <!-- gusev_crater -->
+        <a-asset-item id="gusev_crater-obj" src="models/gusev_crater/model.obj"></a-asset-item>
+        <img id="gusev_crater-tex" src="models/gusev_crater/texture.png">
+
+        <!-- hibes_montes -->
+        <a-asset-item id="hibes_montes-obj" src="models/hibes_montes/model.obj"></a-asset-item>
+        <img id="hibes_montes-tex" src="models/hibes_montes/texture.png">
+
+        <!-- hypanis_vallis -->
+        <a-asset-item id="hypanis_vallis-obj" src="models/hypanis_vallis/model.obj"></a-asset-item>
+        <img id="hypanis_vallis-tex" src="models/hypanis_vallis/texture.png">
+
+        <!-- labyrinthus_noctis -->
+        <a-asset-item id="labyrinthus_noctis-obj" src="models/labyrinthus_noctis/model.obj"></a-asset-item>
+        <img id="labyrinthus_noctis-tex" src="models/labyrinthus_noctis/texture.png">
+
+        <!-- olympus_mons -->
+        <a-asset-item id="olympus_mons-obj" src="models/olympus_mons/model.obj"></a-asset-item>
+        <img id="olympus_mons-tex" src="models/olympus_mons/texture.png">
+
+        <!-- phelgra_montes -->
+        <a-asset-item id="phelgra_montes-obj" src="models/phelgra_montes/model.obj"></a-asset-item>
+        <img id="phelgra_montes-tex" src="models/phelgra_montes/texture.png">
+
+        <!-- valles_marineris -->
+        <a-asset-item id="valles_marineris-obj" src="models/valles_marineris/model.obj"></a-asset-item>
+        <img id="valles_marineris-tex" src="models/valles_marineris/texture.png">
+
+        <!-- meroe_patera -->
+        <a-asset-item id="meroe_patera-obj" src="models/meroe_patera/model.obj"></a-asset-item>
+        <img id="meroe_patera-tex" src="models/meroe_patera/texture.png">
+
+
+			</a-assets>
+
+    <!-- gale_crater -->
+    <a-marker type='barcode' value='20'>
+      <a-obj-model src="#gale_crater-obj" material="src: #gale_crater-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- gasa_crater -->
+    <a-marker type='barcode' value='19'>
+      <a-obj-model src="#gasa_crater-obj" material="src: #gasa_crater-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- gasa_crater -->
+    <a-marker type='barcode' value='3'>
+      <a-obj-model src="#gusev_crater-obj" material="src: #gusev_crater-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- hibes_montes -->
+    <a-marker type='barcode' value='6'>
+      <a-obj-model src="#hibes_montes-obj" material="src: #hibes_montes-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- hypanis_vallis -->
+    <a-marker type='barcode' value='7'>
+      <a-obj-model src="#hypanis_vallis-obj" material="src: #hypanis_vallis-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- labyrinthus_noctis -->
+    <a-marker type='barcode' value='30'>
+      <a-obj-model src="#labyrinthus_noctis-obj" material="src: #labyrinthus_noctis-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- olympus_mons -->
+    <a-marker type='barcode' value='32'>
+      <a-obj-model src="#olympus_mons-obj" material="src: #olympus_mons-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- phelgra_montes -->
+    <a-marker type='barcode' value='39'>
+      <a-obj-model src="#phelgra_montes-obj" material="src: #phelgra_montes-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- valles_marineris -->
+    <a-marker type='barcode' value='42'>
+      <a-obj-model src="#valles_marineris-obj" material="src: #valles_marineris-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+    <!-- meroe_patera -->
+    <a-marker type='barcode' value='37'>
+      <a-obj-model src="#meroe_patera-obj" material="src: #meroe_patera-tex" scale="1 1 1"></a-obj-model>
+    </a-marker>
+
+  	<a-entity camera></a-entity>
+    </a-scene>
+
+  </body>
+</html>
